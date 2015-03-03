@@ -1,7 +1,9 @@
-function Song() {
-}
-
-Song.prototype.persistFavoriteStatus = function(value) {
-  // something complicated
-  throw new Error("not yet implemented");
+var Plane = function() {
+  this.isFlying = true
 };
+
+
+
+// Plane.prototype.isFlying = function() {
+
+// };
