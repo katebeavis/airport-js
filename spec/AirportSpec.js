@@ -7,10 +7,15 @@ describe ("Airport", function() {
   it ("should tell plane to land", function() {
     airport = new Airport
     plane = jasmine.createSpyObj('plane',['land'])
-
     airport.land(plane);
     expect(plane.land).toHaveBeenCalled();
+  });
 
+  it ("should know a plane has landed", function() {
+  	airport = new Airport
+    plane = jasmine.createSpyObj('plane',['land'])
+  	airport.land(plane);
+  	expect(airport.planes).toEqual([plane]);
   });
 
 });
