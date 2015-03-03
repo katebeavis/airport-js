@@ -3,6 +3,9 @@ var Airport = function() {
 };
 
 Airport.prototype.land = function(plane) {
+	if (this.planes.length >= 10) {
+		throw "full";
+	}
 	plane.land();
 	this.planes.push(plane);
 };

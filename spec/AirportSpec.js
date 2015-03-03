@@ -32,4 +32,11 @@ describe ("Airport", function() {
     expect(airport.planes).toEqual ([]);
   });
 
+  it("shouldn't accept planes when full", function() {
+  	while (airport.planes.length < 10) {
+  		airport.land(plane)
+  	};
+ 	expect(function(){airport.land(plane);}).toThrow("full");
+  });
+
 });
