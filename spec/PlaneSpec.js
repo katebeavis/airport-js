@@ -1,4 +1,5 @@
 describe ("Plane", function() {
+	
   var plane;
 
   it("should be flying when created", function() {
