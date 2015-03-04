@@ -22,6 +22,7 @@ describe ("Airport", function() {
   });
 
   it ("should be able to tell a plane to take off", function() {
+    airport.land(plane);
     airport.takeOff(plane);
     expect(plane.takeOff).toHaveBeenCalled();
   });
@@ -39,4 +40,18 @@ describe ("Airport", function() {
  	expect(function(){airport.land(plane);}).toThrow("full");
   });
 
+  it("shouldn't let a plane take off that isn't there", function() {
+  	while (airport.planes.length > 0) {
+  		airport.takeOff(plane)
+  	};
+  	expect(function(){airport.takeOff(plane);}).toThrow("empty");
+  });
+
 });
+
+
+
+
+
+
+
