@@ -1,5 +1,5 @@
 var Airport = function() {
-  this.planes = []
+  this.planes = [];
 };
 
 Airport.prototype.land = function(plane) {

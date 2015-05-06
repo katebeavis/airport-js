@@ -1,11 +1,11 @@
 var Plane = function() {
-  this.isFlying = true
+  this.isFlying = true;
 };
 
 Plane.prototype.land = function() {
-	this.isFlying = false
+	this.isFlying = false;
 };
 
 Plane.prototype.takeOff = function() {
-	this.isFlying = true
+	this.isFlying = true;
 };

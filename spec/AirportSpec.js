@@ -3,12 +3,12 @@ describe ("Airport", function() {
   var airport;
 
   beforeEach(function() {
-    airport = new Airport;
-    plane = jasmine.createSpyObj('plane',['land','takeOff'])
+    airport = new Airport();
+    plane = jasmine.createSpyObj('plane',['land','takeOff']);
   });
 
   it ("should be empty when created", function() {
-    expect(new Airport().planes).toEqual ([])
+    expect(new Airport().planes).toEqual ([]);
   });
 
   it ("should tell plane to land", function() {
@@ -35,15 +35,15 @@ describe ("Airport", function() {
 
   it("shouldn't accept planes when full", function() {
   	while (airport.planes.length < 10) {
-  		airport.land(plane)
-  	};
+  		airport.land(plane);
+  	}
  	expect(function(){airport.land(plane);}).toThrow("full");
   });
 
   it("shouldn't let a plane take off that isn't there", function() {
   	while (airport.planes.length > 0) {
-  		airport.takeOff(plane)
-  	};
+  		airport.takeOff(plane);
+  	}
   	expect(function(){airport.takeOff(plane);}).toThrow("empty");
   });
 
