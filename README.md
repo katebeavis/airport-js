@@ -8,7 +8,7 @@ It is fully tested in Jasmine which I learnt for the first time on this project.
 - Javascript
 - Jasmine
 
-# To Run Tests
+## To Run Tests
 ```
 $ git clone https://github.com/katebeavis/airport-js.git
 $ cd airport-js
